@@ -152,6 +152,11 @@ func (ic *Conn) runHandshakeSync() error {
 
 	// Send our Exchange and read theirs
 	remoteMsg, err := readWriteMsg(rw, msg)
+
+	fmt.Println("aaaaa")
+	fmt.Println(remoteMsg.String())
+	fmt.Println("bbbbb")
+
 	if err != nil {
 		return err
 	}
